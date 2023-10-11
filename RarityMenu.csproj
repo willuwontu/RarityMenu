@@ -3,24 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
-    <RoundsFolder>F:\SteamLibrary\steamapps\common\ROUNDS</RoundsFolder>
+    <RoundsFolder>E:\Program Files (x86)\Steam\steamapps\common\ROUNDS</RoundsFolder>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="UnboundLib" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>$(RoundsFolder)\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\Assemblies\BepInEx.dll</HintPath>
-    </Reference>
-    <Reference Include="UnboundLib">
-      <HintPath>..\Assemblies\UnboundLib.dll</HintPath>
+      <HintPath>$(RoundsFolder)\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="RarityLib">
-      <HintPath>..\Assemblies\RarityLib.dll</HintPath>
+      <HintPath>$(RoundsFolder)\BepInEx\plugins\RarityLib.dll</HintPath>
     </Reference>
     <Reference Include="MMHOOK_Assembly-CSharp">
-      <HintPath>..\Assemblies\MMHOOK_Assembly-CSharp.dll</HintPath>
+      <HintPath>$(RoundsFolder)\BepInEx\plugins\MMHOOK_Assembly-CSharp.dll</HintPath>
     </Reference> 
     <Reference Include="Assembly-CSharp">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\Assembly-CSharp.dll</HintPath>
